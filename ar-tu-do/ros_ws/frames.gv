@@ -1,0 +1,19 @@
+digraph G {
+"base_link" -> "base_imu_link"[label="Broadcaster: /imu_to_base\nAverage rate: 99.681 Hz\nMost recent transform: 91.209 ( -0.005 sec old)\nBuffer length: 4.073 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /vesc_sim_driver\nAverage rate: 50.246 Hz\nMost recent transform: 91.196 ( 0.008 sec old)\nBuffer length: 4.060 sec\n"];
+"base_link" -> "body"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 91.204 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "chassis"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 91.204 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "camera"[label="Broadcaster: /depth_rotation\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 91.204 sec old)\nBuffer length: 0.000 sec\n"];
+"chassis" -> "imu_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 91.204 sec old)\nBuffer length: 0.000 sec\n"];
+"chassis" -> "laser"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 91.204 sec old)\nBuffer length: 0.000 sec\n"];
+"chassis" -> "left_steering"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.248 Hz\nMost recent transform: 91.182 ( 0.022 sec old)\nBuffer length: 4.040 sec\n"];
+"chassis" -> "left_wheel_back"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.248 Hz\nMost recent transform: 91.182 ( 0.022 sec old)\nBuffer length: 4.040 sec\n"];
+"left_steering" -> "left_wheel_front"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.248 Hz\nMost recent transform: 91.182 ( 0.022 sec old)\nBuffer length: 4.040 sec\n"];
+"chassis" -> "right_steering"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.248 Hz\nMost recent transform: 91.182 ( 0.022 sec old)\nBuffer length: 4.040 sec\n"];
+"chassis" -> "right_wheel_back"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.248 Hz\nMost recent transform: 91.182 ( 0.022 sec old)\nBuffer length: 4.040 sec\n"];
+"right_steering" -> "right_wheel_front"[label="Broadcaster: /robot_state_publisher\nAverage rate: 50.248 Hz\nMost recent transform: 91.182 ( 0.022 sec old)\nBuffer length: 4.040 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 91.204"[ shape=plaintext ] ;
+ }->"odom";
+}
